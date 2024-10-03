@@ -8,11 +8,14 @@ EXVoucherExpansion is a Spigot plugin designed to give players kits based on spe
 
 ## Features
 
-- **Keyword-based kit distribution**: Players receive kits when they type predefined keywords in the chat.
-- **EssentialsX integration**: The plugin leverages EssentialsX's `/kit` command to grant kits to players.
-- **Per-player and global kit limits**: Define how many times each player can receive specific kits, and set global limits for kits.
-- **Customizable messages**: Modify the messages displayed to players when they receive kits or when no kits are available through a `lang.yml` file.
-- **Unlimited keywords**: Add as many keywords and corresponding kits as needed.
+- **Keyword-based Kit Assignment**: Players receive kits when they use certain keywords in the chat.
+- **Session-Persistent Kit Limits**:
+  - **Per-Player Limits**: Define how many times each player can receive a specific kit.
+  - **Global Limits**: Define the maximum number of times a kit can be distributed globally.
+- **EssentialsX Integration**: Uses the `/kit` command from EssentialsX to assign kits.
+- **Multi-Language Support**: Customize messages via `lang.yml` for easy localization.
+- **Configurable Kits**: Add unlimited keywords and kits with detailed configuration in `config.yml`.
+- **Persistent Data**: Limits are stored across sessions to ensure consistent behavior, even after a server restart.
 
 ## Installation
 
