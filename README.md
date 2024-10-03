@@ -95,7 +95,7 @@ If you encounter any issues or have questions about the plugin, feel free to ope
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ## Authors
-- [@CptGummiball]([https://www.github.com/octokatherine](https://github.com/CptGummiball/)
+- [@CptGummiball](https://github.com/CptGummiball/)
 
 ## Mentions
 - [EssentialsX](https://github.com/EssentialsX/)
