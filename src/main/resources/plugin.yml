@@ -1,5 +1,5 @@
 name: EXVoucherExpansion
-version: '1.0'
+version: '1.0.5'
 main: org.cptgummiball.eXVoucherExpansion.EXVoucherExpansion
 api-version: '1.20'
 authors: [ cptgummiball ]

@@ -12,10 +12,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class ChatListener implements Listener {
 
@@ -78,6 +75,11 @@ public class ChatListener implements Listener {
             e.printStackTrace();
         }
 
+        // Shuffle kits for randomness
+        Collections.shuffle(kits);
+
+        boolean kitGiven = false;
+
         for (String kitEntry : kits) {
             String[] parts = kitEntry.split(",");
             String kitName = parts[0].trim();
@@ -102,10 +104,13 @@ public class ChatListener implements Listener {
             saveDataFile();
 
             player.sendMessage(ChatColor.GREEN + getKit + kitName);
-            return;
+            kitGiven = true;
+            break;  // Exit loop once kit is given
         }
 
-        player.sendMessage(ChatColor.RED + noKit + keyword);
+        if (!kitGiven) {
+            player.sendMessage(ChatColor.RED + noKit + keyword);
+        }
     }
 
     // Get player's kit count from the data file
@@ -153,3 +158,4 @@ public class ChatListener implements Listener {
         }
     }
 }
+
