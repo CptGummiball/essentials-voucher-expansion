@@ -1,0 +1,18 @@
+# You can set unlimited Keywords
+keyword1:
+  # Limits - 0 = unlimited
+  perPlayerLimit: 1
+  GlobalLimit: 0
+  # Set Kits as List with Kit Name and a Limit separated by comma
+  Kits:
+    - "kit1", 20
+    - "kit2", 1
+    - "kit3", 0
+
+# keyword2:
+  # perPlayerLimit: 0
+  # GlobalLimit: 5
+  # Kits:
+    # - "starter", 10
+    # - "basic", 5
+    # - "vip", 0
