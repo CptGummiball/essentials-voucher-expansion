@@ -17,7 +17,11 @@ EXVoucherExpansion is a Spigot plugin designed to give players kits based on spe
 - **Multi-Language Support**: Customize messages via `lang.yml` for easy localization.
 - **Configurable Kits**: Add unlimited keywords and kits with detailed configuration in `config.yml`.
 - **Persistent Data**: Limits are stored across sessions to ensure consistent behavior, even after a server restart.
-
+- 
+### Requirements
+- Minecraft server running **Spigot 1.20.4** or newer.
+- **Java 17** or newer
+  
 ## Installation
 
 1. Download the latest version of the plugin.
@@ -78,5 +82,20 @@ Example permission for kits:
 essentials.kits.<kitname>
 ````
 
+## Development
+If you want to contribute or modify the plugin, you can clone the repository:
+```bash
+git clone https://github.com/CptGummiball/essentials-voucher-expansion.git
+```
+
+## Support
+If you encounter any issues or have questions about the plugin, feel free to open an issue in the GitHub repository.
+
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Authors
+- [@CptGummiball]([https://www.github.com/octokatherine](https://github.com/CptGummiball/)
+
+## Mentions
+- [EssentialsX](https://github.com/EssentialsX/)
