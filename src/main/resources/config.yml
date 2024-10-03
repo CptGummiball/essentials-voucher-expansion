@@ -1,18 +1,24 @@
 # You can set unlimited Keywords
 keyword1:
+  # Start and end Date for keyword (Date, Time)
+  StartDate: 01/01/2025, 00:00:00
+  EndDate: 01/01/2025, 00:00:00
   # Limits - 0 = unlimited
-  perPlayerLimit: 1
-  GlobalLimit: 0
-  # Set Kits as List with Kit Name and a Limit separated by comma
+  perPlayerLimit: 1      # Number of times a player can receive a specific list of kits
+  GlobalLimit: 0         # Global limit for how many times a keyword can be used
+  # Set Kits as List with Kit Name and a Limit separated by a comma
   Kits:
-    - "kit1", 20
+    - "kit1", 20         # Kit name and its global limit
     - "kit2", 1
-    - "kit3", 0
+    - "kit3", 0          # 0 means unlimited usage
 
-# keyword2:
-  # perPlayerLimit: 0
-  # GlobalLimit: 5
-  # Kits:
+    # Add more keywords as needed
+    # keyword2:
+    # StartDate: 01/01/2025, 00:00:00
+    # EndDate: 01/01/2025, 00:00:00
+    # perPlayerLimit: 0
+    # GlobalLimit: 5
+    # Kits:
     # - "starter", 10
     # - "basic", 5
     # - "vip", 0

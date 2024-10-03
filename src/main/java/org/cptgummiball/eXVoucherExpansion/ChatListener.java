@@ -10,6 +10,9 @@ import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -49,11 +52,31 @@ public class ChatListener implements Listener {
         // Get the translated messages from lang.yml
         String noKit = langConfig.getString("noKit", "No available kits for this keyword: ");
         String getKit = langConfig.getString("getKit", "You have been given the kit: ");
+        String keywordInactive = langConfig.getString("keywordInactive", "This keyword is not active at the moment.");
 
         // Get the kit configuration
         List<String> kits = config.getStringList(keyword + ".Kits");
         int perPlayerLimit = config.getInt(keyword + ".perPlayerLimit");
         int globalLimit = config.getInt(keyword + ".GlobalLimit");
+
+        // Parse start and end date from config
+        String startDateString = config.getString(keyword + ".StartDate");
+        String endDateString = config.getString(keyword + ".EndDate");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy, HH:mm:ss");
+
+        try {
+            Date startDate = dateFormat.parse(startDateString);
+            Date endDate = dateFormat.parse(endDateString);
+            Date now = new Date();
+
+            // Check if current date is within the allowed range
+            if (now.before(startDate) || now.after(endDate)) {
+                player.sendMessage(ChatColor.RED + keywordInactive);
+                return;
+            }
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
 
         for (String kitEntry : kits) {
             String[] parts = kitEntry.split(",");
